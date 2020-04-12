@@ -17,6 +17,9 @@ import io.github.mmm.ui.test.event.TestEventListener;
  */
 public class TestRadioButtonTest extends Assertions {
 
+  /**
+   * Test of {@link TestRadioButton}s with {@link UiToggleGroup}.
+   */
   @Test
   public void testToggleGroup() {
 
