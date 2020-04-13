@@ -4,7 +4,7 @@
  */
 
 /**
- * Provides the implementation of the UI framework based on JavaFx.
+ * Provides the implementation of the UI core for testing.
  */
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.core {

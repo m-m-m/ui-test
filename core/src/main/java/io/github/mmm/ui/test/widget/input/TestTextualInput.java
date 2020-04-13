@@ -12,8 +12,6 @@ import io.github.mmm.ui.api.widget.input.UiTextualInput;
  */
 public abstract class TestTextualInput<V> extends TestInput<V> implements UiTextualInput<V> {
 
-  private String placeholder;
-
   private String autocomplete;
 
   /**
@@ -22,18 +20,6 @@ public abstract class TestTextualInput<V> extends TestInput<V> implements UiText
   public TestTextualInput() {
 
     super();
-  }
-
-  @Override
-  public String getPlaceholder() {
-
-    return this.placeholder;
-  }
-
-  @Override
-  public void setPlaceholder(String placeholder) {
-
-    this.placeholder = placeholder;
   }
 
   @Override

@@ -2,6 +2,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.input;
 
+import io.github.mmm.ui.api.attribute.AttributeWritePlaceholder;
 import io.github.mmm.ui.api.datatype.bitmask.BitMask;
 import io.github.mmm.ui.api.event.UiValueChangeEvent;
 import io.github.mmm.ui.api.widget.UiRegularWidget;
@@ -16,7 +17,7 @@ import io.github.mmm.validation.Validator;
  * @param <V> type of {@link #getValue() value}.
  * @since 1.0.0
  */
-public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V> {
+public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V>, AttributeWritePlaceholder {
 
   private String name;
 
@@ -31,6 +32,8 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
   private V originalValue;
 
   private long modificationTimestamp;
+
+  private String placeholder;
 
   /**
    * The constructor.
@@ -167,6 +170,18 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
     } else {
       this.modificationTimestamp = System.currentTimeMillis();
     }
+  }
+
+  @Override
+  public String getPlaceholder() {
+
+    return this.placeholder;
+  }
+
+  @Override
+  public void setPlaceholder(String placeholder) {
+
+    this.placeholder = placeholder;
   }
 
 }
