@@ -4,7 +4,7 @@
  */
 
 /**
- * Provides the implementation of UI temporal widgets based on JavaFx.
+ * Provides the implementation of UI temporal widgets for testing.
  */
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.temporal {

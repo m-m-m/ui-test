@@ -40,8 +40,6 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryRadioChoice, //
       io.github.mmm.ui.test.factory.core.TestFactorySlot, //
       io.github.mmm.ui.test.factory.core.TestFactoryScrollPanel, //
-      io.github.mmm.ui.test.factory.core.TestFactoryTab, //
-      io.github.mmm.ui.test.factory.core.TestFactoryTabPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryText, //
       io.github.mmm.ui.test.factory.core.TestFactoryTextInput, //
       io.github.mmm.ui.test.factory.core.TestFactoryTextArea, //
