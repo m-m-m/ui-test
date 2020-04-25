@@ -5,7 +5,6 @@ package io.github.mmm.ui.test.widget.input;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import io.github.mmm.ui.api.UiContext;
 import io.github.mmm.ui.api.UiToggleGroup;
 import io.github.mmm.ui.api.event.UiEvent;
 import io.github.mmm.ui.api.event.UiValueChangeEvent;
@@ -28,7 +27,7 @@ public class TestRadioButtonTest extends Assertions {
     TestEventListener listener = new TestEventListener();
     option1.addListener(listener);
     option2.addListener(listener);
-    UiToggleGroup group = UiContext.get().createToggleGroup();
+    UiToggleGroup group = UiToggleGroup.of();
     option1.setToggleGroup(group);
     option2.setToggleGroup(group);
     assertThat(option1.isSelected()).isFalse();

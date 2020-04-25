@@ -6,8 +6,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
 
+import io.github.mmm.base.lang.ToStringFormatter;
 import io.github.mmm.ui.api.widget.input.UiRadioChoice;
-import io.github.mmm.ui.spi.ToStringFormatter;
 
 /**
  * Implementation of {@link UiRadioChoice} for testing.

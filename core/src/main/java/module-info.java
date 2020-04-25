@@ -9,7 +9,7 @@
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.core {
 
-  requires transitive io.github.mmm.ui.api.core;
+  requires transitive io.github.mmm.ui.spi.core;
 
   // TODO bug in JPMS or Eclipse as this is already a transitive dependency of ui
   requires transitive io.github.mmm.value;
@@ -17,11 +17,14 @@ module io.github.mmm.ui.test.core {
   // TODO bug in JPMS or Eclipse as this is already a transitive dependency of ui
   requires transitive io.github.mmm.validation.main;
 
-  provides io.github.mmm.ui.api.UiContext with //
-      io.github.mmm.ui.test.TestContext;
-
   provides io.github.mmm.ui.api.UiScreen with //
       io.github.mmm.ui.test.TestScreen;
+
+  provides io.github.mmm.ui.api.UiDispatcher with //
+      io.github.mmm.ui.test.TestDispatcher;
+
+  provides io.github.mmm.ui.api.factory.UiToggleGroupFactory with //
+      io.github.mmm.ui.test.TestToggleGroupFactory;
 
   provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative with //
       io.github.mmm.ui.test.factory.core.TestFactoryButton, //
