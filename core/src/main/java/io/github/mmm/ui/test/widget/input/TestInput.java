@@ -4,13 +4,11 @@ package io.github.mmm.ui.test.widget.input;
 
 import io.github.mmm.ui.api.attribute.AttributeWritePlaceholder;
 import io.github.mmm.ui.api.datatype.bitmask.BitMask;
-import io.github.mmm.ui.api.event.UiValueChangeEvent;
 import io.github.mmm.ui.api.widget.UiRegularWidget;
 import io.github.mmm.ui.api.widget.form.UiInputContainer;
 import io.github.mmm.ui.api.widget.input.UiInput;
-import io.github.mmm.ui.test.widget.TestActiveWidget;
+import io.github.mmm.ui.test.widget.TestActiveValidatableWidget;
 import io.github.mmm.ui.test.widget.TestLabel;
-import io.github.mmm.validation.Validator;
 
 /**
  * Implementation of {@link UiInput} using JavaFx.
@@ -18,21 +16,14 @@ import io.github.mmm.validation.Validator;
  * @param <V> type of {@link #getValue() value}.
  * @since 1.0.0
  */
-public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V>, AttributeWritePlaceholder {
+public abstract class TestInput<V> extends TestActiveValidatableWidget<V>
+    implements UiInput<V>, AttributeWritePlaceholder {
 
   private String name;
 
   private TestLabel nameWidget;
 
   private UiInputContainer<V> containerWidget;
-
-  private Validator<? super V> validator;
-
-  private V value;
-
-  private V originalValue;
-
-  private long modificationTimestamp;
 
   private String placeholder;
 
@@ -42,8 +33,6 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
   public TestInput() {
 
     super();
-    this.validator = Validator.none();
-    this.modificationTimestamp = -1;
   }
 
   @Override
@@ -80,6 +69,9 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
       if (this.name != null) {
         this.nameWidget.setText(this.name);
       }
+      if (getValidator().isMandatory()) {
+        this.nameWidget.getStyles().add(STYLE_MANDATORY);
+      }
       doSetVisibleState(this.nameWidget, doGetVisibleState(this));
       String id = getId();
       if (id != null) {
@@ -114,62 +106,15 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
   }
 
   @Override
-  public V getValueOrThrow() {
+  protected void setMandatory(boolean mandatory) {
 
-    return this.value;
-  }
-
-  @Override
-  public void setValue(V value, boolean forUser) {
-
-    updateModificationTimestamp(!forUser);
-    if (!forUser) {
-      setOriginalValue(value);
-    }
-    this.value = value;
-    fireEvent(new UiValueChangeEvent(this, true));
-  }
-
-  @Override
-  public V getOriginalValue() {
-
-    return this.originalValue;
-  }
-
-  @Override
-  public void setOriginalValue(V originalValue) {
-
-    this.originalValue = originalValue;
-  }
-
-  @Override
-  public Validator<? super V> getValidator() {
-
-    return this.validator;
-  }
-
-  @Override
-  public void setValidator(Validator<? super V> validator) {
-
-    if (validator == null) {
-      this.validator = Validator.none();
-    } else {
-      this.validator = validator;
-    }
-  }
-
-  @Override
-  public long getModificationTimestamp() {
-
-    return this.modificationTimestamp;
-  }
-
-  private void updateModificationTimestamp(boolean reset) {
-
-    if (reset) {
-      this.modificationTimestamp = -1;
-    } else {
-      this.modificationTimestamp = System.currentTimeMillis();
+    super.setMandatory(mandatory);
+    if (this.nameWidget != null) {
+      if (mandatory) {
+        this.nameWidget.getStyles().add(STYLE_MANDATORY);
+      } else {
+        this.nameWidget.getStyles().remove(STYLE_MANDATORY);
+      }
     }
   }
 
