@@ -11,6 +11,8 @@ module io.github.mmm.ui.test.core {
 
   requires transitive io.github.mmm.ui.spi.core;
 
+  requires transitive io.github.mmm.ui.api.form;
+
   // TODO bug in JPMS or Eclipse as this is already a transitive dependency of ui
   requires transitive io.github.mmm.value;
 
@@ -31,8 +33,6 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryButtonPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryCheckbox, //
       io.github.mmm.ui.test.factory.core.TestFactoryCollapsiblePanel, //
-      io.github.mmm.ui.test.factory.core.TestFactoryFormGroup, //
-      io.github.mmm.ui.test.factory.core.TestFactoryFormPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryHorizontalPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryImage, //
       io.github.mmm.ui.test.factory.core.TestFactoryIntegerInput, //

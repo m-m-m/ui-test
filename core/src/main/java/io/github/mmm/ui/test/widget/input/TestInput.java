@@ -6,6 +6,7 @@ import io.github.mmm.ui.api.attribute.AttributeWritePlaceholder;
 import io.github.mmm.ui.api.datatype.bitmask.BitMask;
 import io.github.mmm.ui.api.event.UiValueChangeEvent;
 import io.github.mmm.ui.api.widget.UiRegularWidget;
+import io.github.mmm.ui.api.widget.form.UiInputContainer;
 import io.github.mmm.ui.api.widget.input.UiInput;
 import io.github.mmm.ui.test.widget.TestActiveWidget;
 import io.github.mmm.ui.test.widget.TestLabel;
@@ -23,7 +24,7 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
 
   private TestLabel nameWidget;
 
-  private TestInputContainer containerWidget;
+  private UiInputContainer<V> containerWidget;
 
   private Validator<? super V> validator;
 
@@ -98,7 +99,7 @@ public abstract class TestInput<V> extends TestActiveWidget implements UiInput<V
   public UiRegularWidget getContainerWidget() {
 
     if (this.containerWidget == null) {
-      this.containerWidget = new TestInputContainer(this);
+      this.containerWidget = UiInputContainer.of(this);
     }
     return this.containerWidget;
   }

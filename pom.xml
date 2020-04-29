@@ -25,6 +25,7 @@
     <module>controller</module>
     <module>core</module>
     <module>chart</module>
+    <module>form</module>
     <module>format</module>
     <module>media</module>
     <module>menu</module>
@@ -60,6 +61,11 @@
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>mmm-ui-test-core</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>mmm-ui-test-form</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
