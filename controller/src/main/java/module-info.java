@@ -8,11 +8,11 @@
  */
 module io.github.mmm.ui.test.controller {
 
-  requires transitive io.github.mmm.ui.api.controller;
+  requires transitive io.github.mmm.ui.spi.controller;
 
   requires transitive io.github.mmm.ui.test.core;
 
-  provides io.github.mmm.ui.api.controller.UiControllerManager with //
-      io.github.mmm.ui.test.controller.TestControllerManager;
+  provides io.github.mmm.ui.api.controller.UiNavigationManager with //
+      io.github.mmm.ui.test.controller.TestNavigationManager;
 
 }
