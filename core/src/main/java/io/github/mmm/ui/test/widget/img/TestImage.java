@@ -13,7 +13,7 @@ import io.github.mmm.ui.api.widget.img.UiImage;
  */
 public class TestImage extends TestAbstractImage implements UiImage {
 
-  private String source;
+  private String url;
 
   private UiSize width;
 
@@ -30,15 +30,15 @@ public class TestImage extends TestAbstractImage implements UiImage {
   }
 
   @Override
-  public String getSource() {
+  public String getUrl() {
 
-    return this.source;
+    return this.url;
   }
 
   @Override
-  public void setSource(String source) {
+  public void setUrl(String url) {
 
-    this.source = source;
+    this.url = url;
   }
 
   @Override
