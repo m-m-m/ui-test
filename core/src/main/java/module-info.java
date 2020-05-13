@@ -5,6 +5,11 @@
 
 /**
  * Provides the implementation of the UI core for testing.
+ *
+ * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
+ * @provides io.github.mmm.ui.api.factory.UiToggleGroupFactory
+ * @provides io.github.mmm.ui.api.UiDispatcher
+ * @provides io.github.mmm.ui.api.UiScreen
  */
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.core {
@@ -38,6 +43,7 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryIntegerInput, //
       io.github.mmm.ui.test.factory.core.TestFactoryIntegerSlider, //
       io.github.mmm.ui.test.factory.core.TestFactoryLabel, //
+      io.github.mmm.ui.test.factory.core.TestFactoryLink, //
       io.github.mmm.ui.test.factory.core.TestFactoryPasswordInput, //
       io.github.mmm.ui.test.factory.core.TestFactoryRadioButton, //
       io.github.mmm.ui.test.factory.core.TestFactoryRadioChoice, //

@@ -3,14 +3,13 @@
 package io.github.mmm.ui.test.widget.button;
 
 import io.github.mmm.ui.api.widget.button.UiButton;
-import io.github.mmm.ui.test.widget.TestClickableWidget;
 
 /**
  * Implementation of {@link UiButton} for testing.
  *
  * @since 1.0.0
  */
-public class TestButton extends TestClickableWidget implements UiButton {
+public class TestButton extends TestAbstractButton implements UiButton {
 
   /**
    * The constructor.
