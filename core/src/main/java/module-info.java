@@ -41,8 +41,6 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryExternalLink, //
       io.github.mmm.ui.test.factory.core.TestFactoryHorizontalPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryImage, //
-      io.github.mmm.ui.test.factory.core.TestFactoryIntegerInput, //
-      io.github.mmm.ui.test.factory.core.TestFactoryIntegerSlider, //
       io.github.mmm.ui.test.factory.core.TestFactoryInternalLink, //
       io.github.mmm.ui.test.factory.core.TestFactoryLabel, //
       io.github.mmm.ui.test.factory.core.TestFactoryPasswordInput, //

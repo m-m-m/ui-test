@@ -24,6 +24,8 @@ module io.github.mmm.ui.test.all {
 
   requires transitive io.github.mmm.ui.test.menu;
 
+  requires transitive io.github.mmm.ui.test.number;
+
   requires transitive io.github.mmm.ui.test.tab;
 
   requires transitive io.github.mmm.ui.test.temporal;
