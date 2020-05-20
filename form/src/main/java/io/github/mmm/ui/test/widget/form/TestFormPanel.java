@@ -20,6 +20,7 @@ public class TestFormPanel<V> extends TestValuedComposite<UiAbstractInput<?>, V>
   public TestFormPanel() {
 
     super();
+    getStyles().add(STYLE);
   }
 
 }

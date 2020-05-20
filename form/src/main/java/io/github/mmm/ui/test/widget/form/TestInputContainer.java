@@ -23,6 +23,7 @@ public class TestInputContainer<V> extends TestWidget implements UiInputContaine
   public TestInputContainer() {
 
     super();
+    getStyles().add(STYLE);
   }
 
   @Override
