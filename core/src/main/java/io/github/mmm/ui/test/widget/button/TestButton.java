@@ -17,6 +17,7 @@ public class TestButton extends TestAbstractButton implements UiButton {
   public TestButton() {
 
     super();
+    getStyles().add(STYLE);
   }
 
 }

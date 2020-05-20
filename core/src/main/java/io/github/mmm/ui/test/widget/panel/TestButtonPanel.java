@@ -19,6 +19,7 @@ public class TestButtonPanel extends TestMutableComposite<UiAbstractButton> impl
   public TestButtonPanel() {
 
     super();
+    getStyles().add(STYLE);
   }
 
 }
