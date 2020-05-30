@@ -39,6 +39,7 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryCheckbox, //
       io.github.mmm.ui.test.factory.core.TestFactoryCollapsiblePanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryExternalLink, //
+      io.github.mmm.ui.test.factory.core.TestFactoryGridPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryHorizontalPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryImage, //
       io.github.mmm.ui.test.factory.core.TestFactoryInternalLink, //
