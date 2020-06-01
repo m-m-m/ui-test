@@ -3,7 +3,6 @@
 package io.github.mmm.ui.test.widget;
 
 import io.github.mmm.ui.api.attribute.AttributeWriteText;
-import io.github.mmm.ui.api.attribute.AttributeWriteTooltip;
 import io.github.mmm.ui.api.widget.UiWidget;
 import io.github.mmm.ui.spi.widget.AbstractUiNativeWidgetWrapper;
 
@@ -12,15 +11,12 @@ import io.github.mmm.ui.spi.widget.AbstractUiNativeWidgetWrapper;
  *
  * @since 1.0.0
  */
-public abstract class TestWidget extends AbstractUiNativeWidgetWrapper<Void>
-    implements AttributeWriteTooltip, AttributeWriteText {
+public abstract class TestWidget extends AbstractUiNativeWidgetWrapper<Void> implements AttributeWriteText {
 
   /** The widget that is currently focussed. */
   protected static TestWidget focussedWidget;
 
   private String id;
-
-  private String tooltip;
 
   private String text;
 
@@ -51,15 +47,9 @@ public abstract class TestWidget extends AbstractUiNativeWidgetWrapper<Void>
   }
 
   @Override
-  public String getTooltip() {
+  protected void setTooltipNative(String newTooltip) {
 
-    return this.tooltip;
-  }
-
-  @Override
-  public void setTooltip(String tooltip) {
-
-    this.tooltip = tooltip;
+    // nothing to do, just a mock
   }
 
   @Override
