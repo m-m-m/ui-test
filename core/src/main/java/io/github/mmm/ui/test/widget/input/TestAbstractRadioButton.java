@@ -3,6 +3,7 @@
 package io.github.mmm.ui.test.widget.input;
 
 import io.github.mmm.ui.api.UiToggleGroup;
+import io.github.mmm.ui.api.event.UiClickEvent;
 import io.github.mmm.ui.api.widget.value.UiAbstractRadioButton;
 import io.github.mmm.ui.test.TestToggleGroup;
 
@@ -46,6 +47,13 @@ public abstract class TestAbstractRadioButton extends TestSelectionInput impleme
     }
     this.toggleGroup = (TestToggleGroup) group;
     this.toggleGroup.add(this);
+  }
+
+  @Override
+  public void click() {
+
+    setValueForUser(Boolean.TRUE);
+    fireEvent(new UiClickEvent(this, true));
   }
 
 }

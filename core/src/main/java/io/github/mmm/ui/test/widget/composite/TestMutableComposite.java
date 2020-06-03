@@ -11,7 +11,7 @@ import io.github.mmm.ui.api.widget.composite.UiMutableComposite;
  * @param <C> type of the {@link #getChild(int) child widgets}.
  * @since 1.0.0
  */
-public abstract class TestMutableComposite<C extends UiWidget> extends TestComposite<C>
+public abstract class TestMutableComposite<C extends UiWidget> extends TestRemovableComposite<C>
     implements UiMutableComposite<C> {
 
   /**
@@ -31,14 +31,6 @@ public abstract class TestMutableComposite<C extends UiWidget> extends TestCompo
     } else {
       this.children.add(index, child);
     }
-  }
-
-  @Override
-  public C removeChild(int index) {
-
-    C child = this.children.remove(index);
-    setParent(child, null);
-    return child;
   }
 
 }

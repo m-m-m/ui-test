@@ -2,10 +2,6 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.menu;
 
-import java.util.Objects;
-
-import io.github.mmm.ui.api.event.UiClickEvent;
-import io.github.mmm.ui.api.event.UiValueChangeEvent;
 import io.github.mmm.ui.api.widget.composite.UiComposite;
 import io.github.mmm.ui.api.widget.menu.UiMenuItemRadioButton;
 import io.github.mmm.ui.test.TestToggleGroup;
@@ -18,30 +14,12 @@ import io.github.mmm.ui.test.widget.input.TestAbstractRadioButton;
  */
 public class TestMenuItemRadioButton extends TestAbstractRadioButton implements UiMenuItemRadioButton {
 
-  private Boolean value;
-
   /**
    * The constructor.
    */
   public TestMenuItemRadioButton() {
 
     super();
-  }
-
-  @Override
-  public Boolean getValue() {
-
-    return this.value;
-  }
-
-  @Override
-  public void setValue(Boolean value) {
-
-    if (Objects.equals(this.value, value)) {
-      return;
-    }
-    this.value = value;
-    fireEvent(new UiValueChangeEvent(this, true));
   }
 
   @Override
@@ -52,13 +30,6 @@ public class TestMenuItemRadioButton extends TestAbstractRadioButton implements 
       TestToggleGroup group = ((TestMenu) parent).getToggleGroup();
       group.add(this);
     }
-  }
-
-  @Override
-  public void click() {
-
-    setSelected(true);
-    fireEvent(new UiClickEvent(this, true));
   }
 
 }

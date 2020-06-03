@@ -3,13 +3,14 @@
 package io.github.mmm.ui.test.widget.menu;
 
 import io.github.mmm.ui.api.widget.menu.UiMenuItem;
+import io.github.mmm.ui.test.widget.button.TestAbstractButton;
 
 /**
  * Implementation of {@link UiMenuItem} for testing.
  *
  * @since 1.0.0
  */
-public class TestMenuItem extends TestAbstractMenuItem implements UiMenuItem {
+public class TestMenuItem extends TestAbstractButton implements UiMenuItem {
 
   /**
    * The constructor.

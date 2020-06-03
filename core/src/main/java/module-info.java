@@ -59,8 +59,16 @@ module io.github.mmm.ui.test.core {
 
   exports io.github.mmm.ui.test.widget;
 
+  exports io.github.mmm.ui.test.widget.button;
+
   exports io.github.mmm.ui.test.widget.composite;
 
+  exports io.github.mmm.ui.test.widget.img;
+
   exports io.github.mmm.ui.test.widget.input;
+
+  exports io.github.mmm.ui.test.widget.link;
+
+  exports io.github.mmm.ui.test.widget.panel;
 
 }

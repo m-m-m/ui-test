@@ -7,6 +7,8 @@ import io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative;
 
 /**
  * Provides the implementation of the UI framework based on JavaFx.
+ * 
+ * @provides UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.menu {
@@ -16,11 +18,7 @@ module io.github.mmm.ui.test.menu {
   requires transitive io.github.mmm.ui.test.core;
 
   provides UiSingleWidgetFactoryNative with //
-      io.github.mmm.ui.test.factory.menu.TestFactoryMenu, //
       io.github.mmm.ui.test.factory.menu.TestFactoryMenuBar, //
-      io.github.mmm.ui.test.factory.menu.TestFactoryMenuItem, //
-      io.github.mmm.ui.test.factory.menu.TestFactoryMenuItemCheckbox, //
-      io.github.mmm.ui.test.factory.menu.TestFactoryMenuItemRadioButton, //
-      io.github.mmm.ui.test.factory.menu.TestFactoryMenuItemSeparator //
+      io.github.mmm.ui.test.factory.menu.TestFactoryNavigationBar //
   ;
 }

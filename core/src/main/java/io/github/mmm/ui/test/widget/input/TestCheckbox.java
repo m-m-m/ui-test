@@ -2,6 +2,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.input;
 
+import io.github.mmm.ui.api.event.UiClickEvent;
 import io.github.mmm.ui.api.widget.input.UiCheckbox;
 import io.github.mmm.ui.api.widget.input.UiTextInput;
 
@@ -18,6 +19,13 @@ public class TestCheckbox extends TestSelectionInput implements UiCheckbox {
   public TestCheckbox() {
 
     super();
+  }
+
+  @Override
+  public void click() {
+
+    setValueForUser(Boolean.valueOf(!isSelected()));
+    fireEvent(new UiClickEvent(this, true));
   }
 
 }

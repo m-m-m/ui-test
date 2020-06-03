@@ -2,7 +2,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.input;
 
-import io.github.mmm.ui.api.widget.attribute.UiWidgetWithSelection;
+import io.github.mmm.ui.api.widget.value.UiWidgetWithSelection;
 
 /**
  * Implementation of {@link UiWidgetWithSelection} for testing.

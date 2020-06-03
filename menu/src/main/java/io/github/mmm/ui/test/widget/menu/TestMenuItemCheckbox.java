@@ -7,13 +7,12 @@ import java.util.Objects;
 import io.github.mmm.ui.api.event.UiClickEvent;
 import io.github.mmm.ui.api.event.UiValueChangeEvent;
 import io.github.mmm.ui.api.widget.composite.UiComposite;
-import io.github.mmm.ui.api.widget.menu.UiMenuItem;
 import io.github.mmm.ui.api.widget.menu.UiMenuItemCheckbox;
 import io.github.mmm.ui.test.TestToggleGroup;
 import io.github.mmm.ui.test.widget.input.TestAbstractRadioButton;
 
 /**
- * Implementation of {@link UiMenuItem} for testing.
+ * Implementation of {@link UiMenuItemCheckbox} for testing.
  *
  * @since 1.0.0
  */

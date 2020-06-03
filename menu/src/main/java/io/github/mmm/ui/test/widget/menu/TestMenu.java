@@ -2,21 +2,18 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.menu;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import io.github.mmm.ui.api.widget.menu.UiAbstractMenuItem;
-import io.github.mmm.ui.api.widget.menu.UiMenu;
+import io.github.mmm.ui.api.event.UiEventListener;
+import io.github.mmm.ui.api.widget.menu.UiAdvancedMenu;
+import io.github.mmm.ui.api.widget.menu.UiMenuItemCheckbox;
+import io.github.mmm.ui.api.widget.menu.UiMenuItemRadioButton;
 import io.github.mmm.ui.test.TestToggleGroup;
 
 /**
- * Implementation of {@link UiMenu} for testing.
+ * Implementation of {@link UiAdvancedMenu} for testing.
  *
  * @since 1.0.0
  */
-public class TestMenu extends TestAbstractMenuItem implements UiMenu {
-
-  private final List<UiAbstractMenuItem> children;
+public class TestMenu extends TestAbstractMenuWithItems implements UiAdvancedMenu {
 
   private TestToggleGroup toggleGroup;
 
@@ -26,52 +23,26 @@ public class TestMenu extends TestAbstractMenuItem implements UiMenu {
   public TestMenu() {
 
     super();
-    this.children = new ArrayList<>();
   }
 
   @Override
-  public void addChild(UiAbstractMenuItem child, int index) {
+  public UiMenuItemCheckbox addCheckbox(String text, UiEventListener listener, int index) {
 
-    if (index == -1) {
-      this.children.add(child);
-    } else {
-      this.children.add(index, child);
-    }
+    TestMenuItemCheckbox checkbox = new TestMenuItemCheckbox();
+    checkbox.setText(text);
+    checkbox.addListener(listener);
+    addChild(checkbox, index);
+    return checkbox;
   }
 
   @Override
-  public boolean removeChild(UiAbstractMenuItem child) {
+  public UiMenuItemRadioButton addRadioButton(String text, UiEventListener listener, int index) {
 
-    boolean removed = this.children.remove(child);
-    return removed;
-  }
-
-  @Override
-  public UiAbstractMenuItem removeChild(int index) {
-
-    UiAbstractMenuItem childItem = this.children.remove(index);
-    return childItem;
-  }
-
-  @Override
-  public int getChildCount() {
-
-    return this.children.size();
-  }
-
-  @Override
-  public int getChildIndex(UiAbstractMenuItem child) {
-
-    return this.children.indexOf(child);
-  }
-
-  @Override
-  public UiAbstractMenuItem getChild(int index) {
-
-    if ((index < 0) || (index >= this.children.size())) {
-      return null;
-    }
-    return this.children.get(index);
+    TestMenuItemRadioButton radio = new TestMenuItemRadioButton();
+    radio.setText(text);
+    radio.addListener(listener);
+    addChild(radio, index);
+    return radio;
   }
 
   /**
