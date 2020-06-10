@@ -2,7 +2,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.media;
 
-import io.github.mmm.ui.api.widget.img.UiImage;
+import io.github.mmm.ui.api.widget.img.UiAbstractImage;
 import io.github.mmm.ui.api.widget.media.UiVideoPlayer;
 
 /**
@@ -12,7 +12,7 @@ import io.github.mmm.ui.api.widget.media.UiVideoPlayer;
  */
 public class TestVideoPlayer extends TestMediaWidget implements UiVideoPlayer {
 
-  private UiImage image;
+  private UiAbstractImage image;
 
   /**
    * The constructor.
@@ -23,13 +23,13 @@ public class TestVideoPlayer extends TestMediaWidget implements UiVideoPlayer {
   }
 
   @Override
-  public UiImage getImage() {
+  public UiAbstractImage getImage() {
 
     return this.image;
   }
 
   @Override
-  public void setImage(UiImage image) {
+  public void setImage(UiAbstractImage image) {
 
     this.image = image;
   }

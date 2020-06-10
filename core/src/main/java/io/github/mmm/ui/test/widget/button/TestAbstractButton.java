@@ -3,6 +3,7 @@
 package io.github.mmm.ui.test.widget.button;
 
 import io.github.mmm.ui.api.widget.button.UiAbstractButton;
+import io.github.mmm.ui.api.widget.img.UiAbstractImage;
 import io.github.mmm.ui.test.widget.TestClickableWidget;
 
 /**
@@ -12,12 +13,26 @@ import io.github.mmm.ui.test.widget.TestClickableWidget;
  */
 public abstract class TestAbstractButton extends TestClickableWidget implements UiAbstractButton {
 
+  private UiAbstractImage icon;
+
   /**
    * The constructor.
    */
   public TestAbstractButton() {
 
     super();
+  }
+
+  @Override
+  public UiAbstractImage getImage() {
+
+    return this.icon;
+  }
+
+  @Override
+  public void setImage(UiAbstractImage icon) {
+
+    this.icon = icon;
   }
 
 }

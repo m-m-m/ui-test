@@ -2,7 +2,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.menu;
 
-import io.github.mmm.ui.api.event.UiEventListener;
+import io.github.mmm.ui.api.event.UiClickEventListener;
 import io.github.mmm.ui.api.widget.menu.UiAdvancedMenu;
 import io.github.mmm.ui.api.widget.menu.UiMenuItemCheckbox;
 import io.github.mmm.ui.api.widget.menu.UiMenuItemRadioButton;
@@ -26,7 +26,7 @@ public class TestMenu extends TestAbstractMenuWithItems implements UiAdvancedMen
   }
 
   @Override
-  public UiMenuItemCheckbox addCheckbox(String text, UiEventListener listener, int index) {
+  public UiMenuItemCheckbox addCheckbox(String text, UiClickEventListener listener, int index) {
 
     TestMenuItemCheckbox checkbox = new TestMenuItemCheckbox();
     checkbox.setText(text);
@@ -36,7 +36,7 @@ public class TestMenu extends TestAbstractMenuWithItems implements UiAdvancedMen
   }
 
   @Override
-  public UiMenuItemRadioButton addRadioButton(String text, UiEventListener listener, int index) {
+  public UiMenuItemRadioButton addRadioButton(String text, UiClickEventListener listener, int index) {
 
     TestMenuItemRadioButton radio = new TestMenuItemRadioButton();
     radio.setText(text);

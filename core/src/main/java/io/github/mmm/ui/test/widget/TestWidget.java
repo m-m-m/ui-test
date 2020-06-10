@@ -16,8 +16,6 @@ public abstract class TestWidget extends AbstractUiNativeWidgetWrapper<Void> imp
   /** The widget that is currently focussed. */
   protected static TestWidget focussedWidget;
 
-  private String id;
-
   private String text;
 
   /**
@@ -35,15 +33,9 @@ public abstract class TestWidget extends AbstractUiNativeWidgetWrapper<Void> imp
   }
 
   @Override
-  public void setId(String id) {
+  protected void setIdNative(String id) {
 
-    this.id = id;
-  }
-
-  @Override
-  public String getId() {
-
-    return this.id;
+    // nothing to do, just a mock
   }
 
   @Override

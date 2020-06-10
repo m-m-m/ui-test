@@ -2,7 +2,7 @@
  * http://www.apache.org/licenses/LICENSE-2.0 */
 package io.github.mmm.ui.test.widget.menu;
 
-import io.github.mmm.ui.api.event.UiEventListener;
+import io.github.mmm.ui.api.event.UiClickEventListener;
 import io.github.mmm.ui.api.widget.menu.UiAbstractMenuEntry;
 import io.github.mmm.ui.api.widget.menu.UiAbstractMenuWithItems;
 import io.github.mmm.ui.api.widget.menu.UiMenuItem;
@@ -25,7 +25,7 @@ public abstract class TestAbstractMenuWithItems extends TestAbstractMenu<UiAbstr
   }
 
   @Override
-  public UiMenuItem addItem(String text, UiEventListener listener, int index) {
+  public UiMenuItem addItem(String text, UiClickEventListener listener, int index) {
 
     TestMenuItem item = new TestMenuItem();
     if (text != null) {
