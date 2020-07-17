@@ -109,7 +109,13 @@ public abstract class TestInput<V> extends TestActiveValidatableWidget<V>
   @Override
   public void setPrefix(String prefix) {
 
-    this.prefix = prefix;
+    if (isEmpty(prefix)) {
+      this.prefix = null;
+      getStyles().remove(STYLE_WITH_PREFIX);
+    } else {
+      this.prefix = prefix;
+      getStyles().add(STYLE_WITH_PREFIX);
+    }
   }
 
   @Override
@@ -121,7 +127,13 @@ public abstract class TestInput<V> extends TestActiveValidatableWidget<V>
   @Override
   public void setSuffix(String suffix) {
 
-    this.suffix = suffix;
+    if (isEmpty(this.prefix)) {
+      this.suffix = null;
+      getStyles().remove(STYLE_WITH_SUFFIX);
+    } else {
+      this.suffix = suffix;
+      getStyles().add(STYLE_WITH_SUFFIX);
+    }
   }
 
   @Override
