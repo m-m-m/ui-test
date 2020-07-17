@@ -18,6 +18,7 @@ import io.github.mmm.ui.api.widget.data.UiDataTable;
 import io.github.mmm.ui.test.widget.TestActiveValidatableWidget;
 import io.github.mmm.value.PropertyPath;
 import io.github.mmm.value.ReadableTypedValue;
+import io.github.mmm.value.TypedPropertyPath;
 
 /**
  * Implementation of {@link UiDataTable} for JavaFx.
@@ -55,7 +56,7 @@ public class TestDataList<R> extends TestActiveValidatableWidget<List<R>> implem
   }
 
   @Override
-  public <V> UiColumn<R, V> createColumn(PropertyPath<V> property) {
+  public <V> UiColumn<R, V> createColumn(TypedPropertyPath<V> property) {
 
     assert verifyProperty(property);
     String title = UiLocalizer.get().localize(property.getName());
@@ -116,10 +117,14 @@ public class TestDataList<R> extends TestActiveValidatableWidget<List<R>> implem
   }
 
   @Override
-  public void addColumn(UiColumn<R, ?> column) {
+  public void addColumn(UiColumn<R, ?> column, int index) {
 
     TestTableColumn<R, ?> fxColumn = (TestTableColumn<R, ?>) column;
-    this.columns.add(fxColumn);
+    if (index == -1) {
+      this.columns.add(fxColumn);
+    } else {
+      this.columns.add(index, fxColumn);
+    }
   }
 
   @SuppressWarnings("unchecked")
