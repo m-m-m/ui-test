@@ -27,6 +27,10 @@ public abstract class TestInput<V> extends TestActiveValidatableWidget<V>
 
   private String placeholder;
 
+  private String prefix;
+
+  private String suffix;
+
   /**
    * The constructor.
    */
@@ -94,6 +98,30 @@ public abstract class TestInput<V> extends TestActiveValidatableWidget<V>
       this.containerWidget = UiInputContainer.of(this);
     }
     return this.containerWidget;
+  }
+
+  @Override
+  public String getPrefix() {
+
+    return this.prefix;
+  }
+
+  @Override
+  public void setPrefix(String prefix) {
+
+    this.prefix = prefix;
+  }
+
+  @Override
+  public String getSuffix() {
+
+    return this.suffix;
+  }
+
+  @Override
+  public void setSuffix(String suffix) {
+
+    this.suffix = suffix;
   }
 
   @Override
