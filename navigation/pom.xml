@@ -7,15 +7,15 @@
     <artifactId>mmm-ui-test-parent</artifactId>
     <version>${revision}${changelist}</version>
   </parent>
-  <artifactId>mmm-ui-test-menu</artifactId>
+  <artifactId>mmm-ui-test-navigation</artifactId>
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
-  <description>Implementation of menu widgets for automated unit testing.</description>
+  <description>Implementation of navigation widgets for automated unit testing.</description>
   
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>mmm-ui-api-menu</artifactId>
+      <artifactId>mmm-ui-api-navigation</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>

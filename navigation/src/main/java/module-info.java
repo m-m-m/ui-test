@@ -4,21 +4,19 @@
  */
 
 /**
- * Provides the implementation of UI media widgets for testing.
- * 
+ * Provides the implementation of UI navigation widgets for testing.
+ *
  * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
-module io.github.mmm.ui.test.media {
+module io.github.mmm.ui.test.navigation {
 
-  requires transitive io.github.mmm.ui.api.media;
+  requires transitive io.github.mmm.ui.api.navigation;
 
   requires transitive io.github.mmm.ui.test.core;
 
   provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative with //
-      io.github.mmm.ui.test.factory.media.TestFactoryAudioPlayer, //
-      io.github.mmm.ui.test.factory.media.TestFactoryMediaPlayer, //
-      io.github.mmm.ui.test.factory.media.TestFactoryVideoPlayer //
+      io.github.mmm.ui.test.factory.navigation.TestFactoryMenuBar, //
+      io.github.mmm.ui.test.factory.navigation.TestFactoryNavigationBar //
   ;
-
 }

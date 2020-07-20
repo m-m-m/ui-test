@@ -4,7 +4,9 @@
  */
 
 /**
- * Provides the implementation of UI chart widgets for testing.
+ * Provides the implementation of UI format widgets for testing.
+ * 
+ * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.format {

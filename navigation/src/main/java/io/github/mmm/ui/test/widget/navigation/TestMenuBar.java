@@ -1,9 +1,9 @@
 /* Copyright (c) The m-m-m Team, Licensed under the Apache License, Version 2.0
  * http://www.apache.org/licenses/LICENSE-2.0 */
-package io.github.mmm.ui.test.widget.menu;
+package io.github.mmm.ui.test.widget.navigation;
 
-import io.github.mmm.ui.api.widget.menu.UiAdvancedMenu;
-import io.github.mmm.ui.api.widget.menu.UiMenuBar;
+import io.github.mmm.ui.api.widget.navigation.UiAdvancedMenu;
+import io.github.mmm.ui.api.widget.navigation.UiMenuBar;
 
 /**
  * Implementation of {@link UiMenuBar} for testing.
