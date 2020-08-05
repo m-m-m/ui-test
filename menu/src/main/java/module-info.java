@@ -4,19 +4,19 @@
  */
 
 /**
- * Provides the implementation of UI navigation widgets for testing.
+ * Provides the implementation of UI menu widgets for testing.
  *
  * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
-module io.github.mmm.ui.test.navigation {
+module io.github.mmm.ui.test.menu {
 
-  requires transitive io.github.mmm.ui.api.navigation;
+  requires transitive io.github.mmm.ui.api.menu;
 
   requires transitive io.github.mmm.ui.test.core;
 
   provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative with //
-      io.github.mmm.ui.test.factory.navigation.TestFactoryMenuBar, //
-      io.github.mmm.ui.test.factory.navigation.TestFactoryNavigationBar //
+      io.github.mmm.ui.test.factory.menu.TestFactoryMenuBar, //
+      io.github.mmm.ui.test.factory.menu.TestFactoryNavigationBar //
   ;
 }

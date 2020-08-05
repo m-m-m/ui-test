@@ -29,7 +29,7 @@
     <module>form</module>
     <module>format</module>
     <module>media</module>
-    <module>navigation</module>
+    <module>menu</module>
     <module>number</module>
     <module>tab</module>
     <module>temporal</module>
@@ -87,7 +87,7 @@
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
-        <artifactId>mmm-ui-test-navigation</artifactId>
+        <artifactId>mmm-ui-test-menu</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

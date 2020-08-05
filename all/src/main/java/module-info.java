@@ -22,7 +22,7 @@ module io.github.mmm.ui.test.all {
 
   requires transitive io.github.mmm.ui.test.media;
 
-  requires transitive io.github.mmm.ui.test.navigation;
+  requires transitive io.github.mmm.ui.test.menu;
 
   requires transitive io.github.mmm.ui.test.number;
 
