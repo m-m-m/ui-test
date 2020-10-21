@@ -3,6 +3,7 @@
 package io.github.mmm.ui.test.widget.menu;
 
 import io.github.mmm.ui.api.event.UiClickEventListener;
+import io.github.mmm.ui.api.widget.UiWidget;
 import io.github.mmm.ui.api.widget.menu.UiAbstractMenuEntry;
 import io.github.mmm.ui.api.widget.menu.UiAbstractMenuWithItems;
 import io.github.mmm.ui.api.widget.menu.UiMenuItem;
@@ -28,9 +29,7 @@ public abstract class TestAbstractMenuWithItems extends TestAbstractMenu<UiAbstr
   public UiMenuItem addItem(String text, UiClickEventListener listener, int index) {
 
     TestMenuItem item = new TestMenuItem();
-    if (text != null) {
-      item.setText(text);
-    }
+    UiWidget.initText(item, text);
     if (listener != null) {
       item.addListener(listener);
     }

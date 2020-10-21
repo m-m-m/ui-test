@@ -5,6 +5,7 @@ package io.github.mmm.ui.test.widget.tab;
 import java.util.function.Supplier;
 
 import io.github.mmm.ui.api.widget.UiRegularWidget;
+import io.github.mmm.ui.api.widget.UiWidget;
 import io.github.mmm.ui.api.widget.tab.UiTab;
 import io.github.mmm.ui.api.widget.tab.UiTabPanel;
 import io.github.mmm.ui.test.widget.composite.TestMutableComposite;
@@ -30,7 +31,7 @@ public class TestTabPanel extends TestMutableComposite<UiTab> implements UiTabPa
   public UiTab addTab(String text, UiRegularWidget child, int index) {
 
     TestTab tab = new TestTab();
-    tab.setText(text);
+    UiWidget.initText(tab, text);
     tab.setChild(child);
     addChild(tab, index);
     return tab;
@@ -40,7 +41,7 @@ public class TestTabPanel extends TestMutableComposite<UiTab> implements UiTabPa
   public UiTab addTab(String text, Supplier<UiRegularWidget> childSupplier, int index) {
 
     TestTab tab = new TestTab();
-    tab.setText(text);
+    UiWidget.initText(tab, text);
     tab.setChild(childSupplier);
     addChild(tab, index);
     return tab;
