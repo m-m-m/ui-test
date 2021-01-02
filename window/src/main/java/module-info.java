@@ -5,7 +5,10 @@
  */
 
 /**
- * Provides the implementation of the UI framework based on JavaFx.
+ * Provides the implementation of the UI framework for testing.
+ *
+ * @provides io.github.mmm.ui.api.notifier.UiNotifier
+ * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
 module io.github.mmm.ui.test.window {
