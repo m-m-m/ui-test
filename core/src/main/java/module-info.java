@@ -16,6 +16,8 @@ module io.github.mmm.ui.test.core {
 
   requires transitive io.github.mmm.ui.spi.core;
 
+  requires transitive io.github.mmm.ui.spi.nls;
+
   requires transitive io.github.mmm.ui.api.form;
 
   provides io.github.mmm.ui.api.UiScreen with //

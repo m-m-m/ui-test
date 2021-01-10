@@ -11,11 +11,15 @@
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
   <description>Implementation of core widgets for automated unit testing.</description>
-  
+
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>mmm-ui-spi-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>mmm-ui-spi-nls</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
