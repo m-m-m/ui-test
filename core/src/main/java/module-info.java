@@ -18,6 +18,8 @@ module io.github.mmm.ui.test.core {
 
   requires transitive io.github.mmm.ui.spi.nls;
 
+  requires transitive io.github.mmm.ui.api.binding;
+
   requires transitive io.github.mmm.ui.api.form;
 
   provides io.github.mmm.ui.api.UiScreen with //
@@ -38,6 +40,7 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryExternalLink, //
       io.github.mmm.ui.test.factory.core.TestFactoryGridPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryHorizontalPanel, //
+      io.github.mmm.ui.test.factory.core.TestFactoryIcon, //
       io.github.mmm.ui.test.factory.core.TestFactoryImage, //
       io.github.mmm.ui.test.factory.core.TestFactoryInternalLink, //
       io.github.mmm.ui.test.factory.core.TestFactoryLabel, //

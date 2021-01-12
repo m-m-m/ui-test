@@ -4,7 +4,7 @@ package io.github.mmm.ui.test.factory.core;
 
 import io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative;
 import io.github.mmm.ui.api.widget.panel.UiHorizontalPanel;
-import io.github.mmm.ui.test.widget.panel.FxHorizontalPanel;
+import io.github.mmm.ui.test.widget.panel.TestHorizontalPanel;
 
 /**
  * {@link UiSingleWidgetFactoryNative} for {@link UiHorizontalPanel}.
@@ -22,7 +22,7 @@ public class TestFactoryHorizontalPanel implements UiSingleWidgetFactoryNative<U
   @Override
   public UiHorizontalPanel create() {
 
-    return new FxHorizontalPanel();
+    return new TestHorizontalPanel();
   }
 
 }

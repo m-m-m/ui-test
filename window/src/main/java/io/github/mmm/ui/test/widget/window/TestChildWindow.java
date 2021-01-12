@@ -28,6 +28,12 @@ public abstract class TestChildWindow extends TestAbstractWindow implements UiCh
   }
 
   @Override
+  protected boolean isInitiallyVisible() {
+
+    return false;
+  }
+
+  @Override
   protected boolean isVisibleWithoutRoot() {
 
     return true;

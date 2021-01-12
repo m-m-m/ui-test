@@ -9,12 +9,12 @@ import io.github.mmm.ui.api.widget.panel.UiHorizontalPanel;
  *
  * @since 1.0.0
  */
-public class FxHorizontalPanel extends TestMutablePanel implements UiHorizontalPanel {
+public class TestHorizontalPanel extends TestMutablePanel implements UiHorizontalPanel {
 
   /**
    * The constructor.
    */
-  public FxHorizontalPanel() {
+  public TestHorizontalPanel() {
 
     super();
   }

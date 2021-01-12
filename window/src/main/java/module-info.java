@@ -7,7 +7,7 @@
 /**
  * Provides the implementation of the UI framework for testing.
  *
- * @provides io.github.mmm.ui.api.notifier.UiNotifier
+ * @provides io.github.mmm.ui.api.notify.UiNotifier
  * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
@@ -17,8 +17,8 @@ module io.github.mmm.ui.test.window {
 
   requires transitive io.github.mmm.ui.test.core;
 
-  provides io.github.mmm.ui.api.notifier.UiNotifier with //
-      io.github.mmm.ui.test.notifier.TestNotifier;
+  provides io.github.mmm.ui.api.notify.UiNotifier with //
+      io.github.mmm.ui.test.window.notify.TestNotifier;
 
   provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative with //
       io.github.mmm.ui.test.factory.window.TestFactoryMainWindow, //
