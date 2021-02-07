@@ -42,6 +42,7 @@ module io.github.mmm.ui.test.core {
       io.github.mmm.ui.test.factory.core.TestFactoryHorizontalPanel, //
       io.github.mmm.ui.test.factory.core.TestFactoryIcon, //
       io.github.mmm.ui.test.factory.core.TestFactoryImage, //
+      io.github.mmm.ui.test.factory.core.TestFactoryInputContainer, //
       io.github.mmm.ui.test.factory.core.TestFactoryInternalLink, //
       io.github.mmm.ui.test.factory.core.TestFactoryLabel, //
       io.github.mmm.ui.test.factory.core.TestFactoryPasswordInput, //

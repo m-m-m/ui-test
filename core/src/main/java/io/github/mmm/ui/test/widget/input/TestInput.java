@@ -4,9 +4,8 @@ package io.github.mmm.ui.test.widget.input;
 
 import io.github.mmm.ui.api.attribute.AttributeWritePlaceholder;
 import io.github.mmm.ui.api.datatype.bitmask.BitMask;
-import io.github.mmm.ui.api.widget.UiRegularWidget;
-import io.github.mmm.ui.api.widget.form.UiInputContainer;
 import io.github.mmm.ui.api.widget.input.UiInput;
+import io.github.mmm.ui.api.widget.input.UiInputContainer;
 import io.github.mmm.ui.test.widget.TestActiveValidatableWidget;
 import io.github.mmm.ui.test.widget.TestLabel;
 
@@ -92,7 +91,7 @@ public abstract class TestInput<V> extends TestActiveValidatableWidget<V>
   }
 
   @Override
-  public UiRegularWidget getContainerWidget() {
+  public UiInputContainer<V> getContainerWidget() {
 
     if (this.containerWidget == null) {
       this.containerWidget = UiInputContainer.of(this);
