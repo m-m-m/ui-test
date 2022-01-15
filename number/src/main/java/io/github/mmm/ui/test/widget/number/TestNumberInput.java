@@ -15,7 +15,8 @@ import io.github.mmm.validation.Validator;
  * @param <V> type of the {@link #getValue() value}.
  * @since 1.0.0
  */
-public abstract class TestNumberInput<V extends Number> extends TestTextualInput<V> implements UiNumberInput<V> {
+public abstract class TestNumberInput<V extends Number & Comparable<?>> extends TestTextualInput<V>
+    implements UiNumberInput<V> {
 
   private final NumericRange<V> range;
 
