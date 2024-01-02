@@ -49,7 +49,7 @@ public abstract class TestSlider<V extends Number & Comparable<?>> extends TestI
   public V getValueOrThrow() {
 
     if (this.textEditable) {
-      return getNumberType().valueOf(getText());
+      return getNumberType().parse(getText());
     } else {
       return getNumberType().valueOf(Double.valueOf(this.value));
     }

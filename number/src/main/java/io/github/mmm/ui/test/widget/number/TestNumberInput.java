@@ -49,7 +49,7 @@ public abstract class TestNumberInput<V extends Number & Comparable<?>> extends 
     if (value.isEmpty()) {
       return null;
     }
-    return getNumberType().valueOf(value);
+    return getNumberType().parse(value);
   }
 
   @Override
