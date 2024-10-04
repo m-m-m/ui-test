@@ -7,15 +7,15 @@
     <artifactId>mmm-ui-test-parent</artifactId>
     <version>${revision}</version>
   </parent>
-  <artifactId>mmm-ui-test-temporal</artifactId>
+  <artifactId>mmm-ui-test-time</artifactId>
   <packaging>jar</packaging>
   <name>${project.artifactId}</name>
-  <description>Implementation of temporal widgets for automated unit testing.</description>
-  
+  <description>Implementation of java.time related widgets for automated unit testing.</description>
+
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>mmm-ui-api-temporal</artifactId>
+      <artifactId>mmm-ui-api-time</artifactId>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>

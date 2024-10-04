@@ -5,17 +5,19 @@
 
 /**
  * Provides the implementation of UI temporal widgets for testing.
+ *
+ * @provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative
  */
 @SuppressWarnings("rawtypes") //
-module io.github.mmm.ui.test.temporal {
+module io.github.mmm.ui.test.time {
 
-  requires transitive io.github.mmm.ui.api.temporal;
+  requires transitive io.github.mmm.ui.api.time;
 
   requires transitive io.github.mmm.ui.test.core;
 
   provides io.github.mmm.ui.api.factory.UiSingleWidgetFactoryNative with //
-      io.github.mmm.ui.test.factory.temporal.TestFactoryDateInput, //
-      io.github.mmm.ui.test.factory.temporal.TestFactoryDateTimeInput, //
-      io.github.mmm.ui.test.factory.temporal.TestFactoryTimeInput;
+      io.github.mmm.ui.test.factory.time.TestFactoryDateInput, //
+      io.github.mmm.ui.test.factory.time.TestFactoryDateTimeInput, //
+      io.github.mmm.ui.test.factory.time.TestFactoryTimeInput;
 
 }
