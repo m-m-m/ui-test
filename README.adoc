@@ -5,10 +5,10 @@ image:https://github.com/m-m-m/ui-test/actions/workflows/build.yml/badge.svg["Bu
 
 == mmm-ui-test
 
-image:https://img.shields.io/maven-central/v/io.github.m-m-m/mmm-ui-test.svg?label=Maven%20Central["Maven Central",link=https://search.maven.org/search?q=g:io.github.m-m-m]
-image:https://m-m-m.github.io/javadoc.svg?status=online["apidoc",link="https://m-m-m.github.io/docs/api/io.github.mmm.ui.test/module-summary.html"]
+image:https://img.shields.io/maven-central/v/io.github.m-m-m/mmm-ui-test-all.svg?label=Maven%20Central["Maven Central",link=https://search.maven.org/search?q=g:io.github.m-m-m]
+image:https://javadoc.io/badge2/io.github.m-m-m/mmm-ui-test-core/javadoc.svg["JavaDoc",link=https://javadoc.io/doc/io.github.m-m-m/mmm-ui-test-core]
 
-The module `mmm-ui-test` provides the implementation of the UI API for automated unit testing.
+The modules `mmm-ui-test-*` provide the implementation of the UI API for automated unit testing.
 It is a dummy implementation that runs everywhere and headless without any real GUI.
 However, it is fully functional and sends the same events if widgets get clicked or triggered programatically.
 
