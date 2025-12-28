@@ -21,11 +21,11 @@ public class TestNotifierTest extends Assertions {
   @Test
   public void testCreatePopup() {
 
-    // given
+    // arrange
     UiNotification notification = UiNotification.ofInfo("Hello World!", "Cool Title");
-    // when
+    // act
     UiPopup popup = UiPopupNotifier.get().createPopupOk(notification);
-    // then
+    // assert
     assertThat(popup).isNotNull();
     assertThat(popup.isVisible()).isFalse();
     assertThat(popup.getTitle()).isEqualTo(notification.getTitle());

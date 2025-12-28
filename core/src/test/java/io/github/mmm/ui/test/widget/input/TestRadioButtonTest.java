@@ -33,9 +33,9 @@ public class TestRadioButtonTest extends Assertions {
     assertThat(option1.isSelected()).isFalse();
     assertThat(option2.isSelected()).isFalse();
     assertThat(listener.getEvents()).isEmpty();
-    // when
+    // act
     option1.setSelected(true);
-    // then
+    // assert
     assertThat(listener.getEvents()).hasSize(1);
     UiEvent event = listener.getLastEvent();
     assertThat(event.getType()).isEqualTo(UiValueChangeEvent.TYPE);
@@ -43,9 +43,9 @@ public class TestRadioButtonTest extends Assertions {
     assertThat(option1.isSelected()).isTrue();
     assertThat(option2.isSelected()).isFalse();
     listener.clear();
-    // and when
+    // act again
     option2.setSelected(true);
-    // then
+    // assert
     assertThat(listener.getEvents()).hasSize(2);
     event = listener.getEvents().get(0);
     assertThat(event.getType()).isEqualTo(UiValueChangeEvent.TYPE);
