@@ -15,11 +15,11 @@ import io.github.mmm.ui.api.window.notiy.UiPopupNotifier;
 /**
  * Test of {@link TestNotifier}.
  */
-public class TestNotifierTest extends Assertions {
+class TestNotifierTest extends Assertions {
 
   /** Test of {@link TestNotifier#createPopupOk(io.github.mmm.ui.api.notify.UiNotification)}. */
   @Test
-  public void testCreatePopup() {
+  void testCreatePopup() {
 
     // arrange
     UiNotification notification = UiNotification.ofInfo("Hello World!", "Cool Title");

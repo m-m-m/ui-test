@@ -14,13 +14,13 @@ import io.github.mmm.ui.test.event.TestEventListener;
 /**
  * Test of {@link TestRadioButton}.
  */
-public class TestRadioButtonTest extends Assertions {
+class TestRadioButtonTest extends Assertions {
 
   /**
    * Test of {@link TestRadioButton}s with {@link UiToggleGroup}.
    */
   @Test
-  public void testToggleGroup() {
+  void testToggleGroup() {
 
     UiRadioButton option1 = UiRadioButton.of("option1");
     UiRadioButton option2 = UiRadioButton.of("option2");
